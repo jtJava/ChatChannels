@@ -37,7 +37,7 @@ public class MessagesConfig {
 
         this.filterAdded = configuration.getString("messages.filter-added", "&fFilter phrase &e%phrase% &fadded.");
         this.filterRemoved = configuration.getString("messages.filter-removed", "&fFilter phrase &e%phrase% &fremoved.");
-        this.filterToggled = configuration.getString("messages.filter-toggled", "&fFilter has been %enabled/disabled%.");
+        this.filterToggled = configuration.getString("messages.filter-toggled", "&fFilter has been %enabled%.");
 
         this.configReloaded = configuration.getString("messages.config-reloaded", "&aConfig reloaded.");
         this.configReloadError = configuration.getString("messages.config-reload-error", "&cConfig save/reload failed.");
