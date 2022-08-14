@@ -38,7 +38,6 @@ public final class ChatChannels extends JavaPlugin {
 
         this.commandManager = new PaperCommandManager(this);
         this.commandManager.getCommandCompletions().registerCompletion("channels", string ->
-                // Replace spaces so that tab completion works.
                 this.channelManager.getChannels().keySet()
         );
         this.commandManager.registerCommand(new ChannelCommand());
