@@ -1,0 +1,4 @@
+name: ChatChannels
+version: '${project.version}'
+main: me.iowa.ChatChannels
+api-version: 1.19

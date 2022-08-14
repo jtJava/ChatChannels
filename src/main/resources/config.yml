@@ -1,0 +1,39 @@
+messages:
+  channel-created: "&fChannel &e%channel% &fcreated."
+  channel-switched: "&fYou are now speaking in the %channel% channel."
+  channel-radius-changed: "&fChannel &e%channel% &fradius changed to &e%radius%&f."
+  channel-world-changed: "&fChannel &e%channel% &fworld changed to &e%world%&f."
+  channel-not-found: "&cWe couldn't find a channel with the given name."
+  channel-exists: "&cA channel with the given name already exists."
+
+  filter-added: "&fYou have added &e%phrase%&f to the filter list."
+  filter-removed: "&fYou have removed &e%phrase%&f from the filter list."
+  filter-toggled: "&fYou have toggled the filter list to &e%enabled/disabled%&f."
+
+  config-reloaded: "&aConfig reloaded."
+  config-reload-error":  "&cConfig save/reload failed."
+
+filtered-phrases:
+  - "fuck"
+
+## Set worldname to "*" for global, block radius to 0 for distance check to not apply.
+channels:
+  - ==: me.iowa.channel.Channel
+    identifier: Global
+    worldName: *
+    blockRadius: 0
+
+  - ==: me.iowa.channel.Channel
+    identifier: Local
+    worldName: world
+    blockRadius: 50
+    
+  - ==: me.iowa.channel.Channel
+    identifier: Shout
+    worldName: world
+    blockRadius: 20
+
+  - ==: me.iowa.channel.Channel
+    identifier: Whisper
+    worldName: world
+    blockRadius: 5
