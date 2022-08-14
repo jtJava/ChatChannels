@@ -34,9 +34,11 @@ public class MessagesConfig {
         this.channelSwitched = configuration.getString("messages.channel-switched", "&fYou are now speaking in the %channel% channel.");
         this.channelNotFound = configuration.getString("messages.channel-not-found", "&cWe couldn't find a channel with the given name.");
         this.channelExists = configuration.getString("messages.channel-exists", "&cA channel with the given name already exists.");
+
         this.filterAdded = configuration.getString("messages.filter-added", "&fFilter phrase &e%phrase% &fadded.");
         this.filterRemoved = configuration.getString("messages.filter-removed", "&fFilter phrase &e%phrase% &fremoved.");
         this.filterToggled = configuration.getString("messages.filter-toggled", "&fFilter has been %enabled/disabled%.");
+
         this.configReloaded = configuration.getString("messages.config-reloaded", "&aConfig reloaded.");
         this.configReloadError = configuration.getString("messages.config-reload-error", "&cConfig save/reload failed.");
     }

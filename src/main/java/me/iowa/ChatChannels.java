@@ -32,14 +32,11 @@ public final class ChatChannels extends JavaPlugin {
 
         ConfigurationSerialization.registerClass(Channel.class);
 
-        // Plugin startup logic
         this.mySQL = new MySQL();
         this.channelManager = new ChannelManager();
 
         this.commandManager = new PaperCommandManager(this);
-        this.commandManager.getCommandCompletions().registerCompletion("channels", string ->
-                this.channelManager.getChannels().keySet()
-        );
+        this.commandManager.getCommandCompletions().registerCompletion("channels", string -> this.channelManager.getChannels().keySet());
         this.commandManager.registerCommand(new ChannelCommand());
 
         this.getServer().getPluginManager().registerEvents(new ChatListener(), this);
@@ -53,8 +50,10 @@ public final class ChatChannels extends JavaPlugin {
 
     public void onReload() {
         this.reloadConfig();
+
         this.messagesConfig = new MessagesConfig(this.getConfig());
         this.generalConfig = new GeneralConfig(this.getConfig());
+
         this.channelManager = new ChannelManager();
     }
 }

@@ -99,6 +99,7 @@ public class ChannelCommand extends BaseCommand {
 
     @Subcommand("filter")
     @Syntax("[phrase]")
+    @CommandPermission("channels.modify")
     public void filter(CommandSender sender, String phrase) {
         CHAT_CHANNELS.getGeneralConfig().getFilteredPhrases().add(phrase);
         CHAT_CHANNELS.getGeneralConfig().save();
@@ -107,6 +108,7 @@ public class ChannelCommand extends BaseCommand {
 
     @Subcommand("unfilter")
     @Syntax("[phrase]")
+    @CommandPermission("channels.modify")
     public void unfilter(CommandSender sender, String phrase) {
         CHAT_CHANNELS.getGeneralConfig().getFilteredPhrases().remove(phrase);
         CHAT_CHANNELS.getGeneralConfig().save();

@@ -27,7 +27,7 @@ channels:
     identifier: Local
     worldName: world
     blockRadius: 50
-    
+
   - ==: me.iowa.channel.Channel
     identifier: Shout
     worldName: world
